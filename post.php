@@ -9,6 +9,9 @@
                 <li itemprop="author"><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li>
                 <li><?php _e('时间: '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></li>
                 <li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
+                <?php if($this->user->hasLogin()):?>
+                  <li><a href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>"  target="_blank">编辑</a></li>
+                <?php endif;?>
             </ul>
             <div class="post-content" itemprop="articleBody">
                 <?php $this->content(); ?>
