@@ -780,6 +780,9 @@ button, textarea,input {
 	padding-top: 12px;
     padding-bottom: 8px;
 }
+.blog_body {
+    min-height: calc(100vh - 41px);
+}
 }
 /*loading*/
 #loading-wrapper {
