@@ -624,6 +624,19 @@ button, textarea,input {
     bottom: 10px;
 	display:none;
 }
+/*归档*/
+.archive_month{
+	padding-left:16px;
+}
+.archive_month li{
+	list-style:none;
+}
+.archive_month h4{
+	margin: 6px 0;
+}
+.archive_year h3{
+	margin:6px 0;
+}
 /*手机导航*/
 
 .mobile_nav_body {
