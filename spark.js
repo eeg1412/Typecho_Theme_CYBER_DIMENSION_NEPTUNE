@@ -23,9 +23,9 @@
         this.color = colors[~~(Math.random()*colors.length)];
         this.radius = rand(min, max);
         this.x = rand(0, canvas.width);
-        this.y = rand(-20, canvas.height*0.5);
+        this.y = rand(60, canvas.height);
         this.vx = -5 + Math.random()*10;
-        this.vy = 0.7 * this.radius;
+        this.vy = (Math.random()-0.5) * this.radius;
         this.valpha = rand(0.02, 0.09);
         this.opacity = 0;
         this.life = 0;
@@ -54,18 +54,24 @@
       };
 
       Particle.prototype.draw = function(c) {
-		var grd = c.createRadialGradient(this.x,this.y,0,this.x,this.y,this.radius);
-		grd.addColorStop(0, "rgba(" + this.color + ", " + Math.min(this.opacity, 0.85) + ")");
-		grd.addColorStop(0.6, "rgba(" + this.color + ", " + Math.min(this.opacity, 0.85) + ")");
-		grd.addColorStop(1, "rgba(76,174,187,0)");
+		var grd = c.createRadialGradient(this.x,this.y,0,this.x,this.y,this.radius*4);
+		grd.addColorStop(0, "rgba(" + "84,204,243" + ", " + Math.min(this.opacity-0.2, 0.65) + ")");
+		//grd.addColorStop(0.25, "rgba(" + this.color + ", " + Math.min(this.opacity-0.2, 0.65) + ")");
+		grd.addColorStop(1, "rgba(" + "84,204,243" + ", " + '0' + ")");
 		c.fillStyle = grd;
 		
        	//c.strokeStyle = "rgba(" + this.color + ", " + Math.min(this.opacity, 0.85) + ")";
         //c.fillStyle = "rgba(" + this.color + ", " + Math.min(this.opacity, 0.65) + ")";
         c.beginPath();
-        c.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
+        c.arc(this.x, this.y, this.radius*4, 2 * Math.PI, false);
         c.fill();
         //c.stroke();
+		
+		c.strokeStyle = "rgba(" + this.color + ", " + Math.min(this.opacity, 0.85) + ")";
+        c.fillStyle = "rgba(" + this.color + ", " + Math.min(this.opacity, 0.65) + ")";
+		c.beginPath();
+		c.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
+		c.fill();
       };
 
       return Particle;
@@ -121,6 +127,6 @@
     };
 
     window.addEventListener('resize', draw, false);
-    setInterval(draw, 1000 / 30);
+    setInterval(draw, 1000 / 60);
     setInterval(update, 1000 / 60);
   }).call(this);
