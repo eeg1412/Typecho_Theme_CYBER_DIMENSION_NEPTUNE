@@ -352,13 +352,12 @@ textarea {
 	margin-left: 15px;
 }
 #footer {
-	padding: 3em 0;
 	line-height: 1.5;
 	text-align: center;
 	color: #999;
 	background-color: #fff;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 16px;
 	background-image: url(img/line_gold.png);
 	background-position: top;
 	background-repeat: repeat-x;
@@ -774,6 +773,13 @@ button, textarea,input {
 }
 .phone_nav_body{
 	display:block;
+}
+.blog_icp{
+	display:block;
+}
+#footer{
+	padding-top: 12px;
+    padding-bottom: 8px;
 }
 }
 /*loading*/

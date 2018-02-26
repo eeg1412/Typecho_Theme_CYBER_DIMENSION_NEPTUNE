@@ -7,18 +7,10 @@
 <div id="pagetop"></div>
 <footer id="footer" role="contentinfo">
     &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.
+    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.<a class="blog_icp" href=http://www.miibeian.gov.cn><?php $this->options->icp() ?></a>
 </footer><!-- end #footer -->
 <?php $this->footer(); ?>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?d7dff91c571781b61823acebaa4a32ae";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+<?php $this->options->Tongji() ?>
 <script src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <?php if ($this->is('index')): ?>
 <script src="<?php $this->options->themeUrl('spark.js'); ?>"></script>
