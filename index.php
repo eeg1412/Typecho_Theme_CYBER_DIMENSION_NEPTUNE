@@ -17,7 +17,7 @@
  * 
  * @package 四女神Online
  * @author 广树
- * @version 0.5
+ * @version 0.6
  * @link http://www.wikimoe.com
  */
 
