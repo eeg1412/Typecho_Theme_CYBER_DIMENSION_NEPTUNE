@@ -11,7 +11,6 @@
 </footer><!-- end #footer -->
 <?php $this->footer(); ?>
 <?php $this->options->Tongji() ?>
-<script src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <?php if ($this->is('index')): ?>
 <script src="<?php $this->options->themeUrl('spark.js'); ?>"></script>
 <?php endif; ?>
