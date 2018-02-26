@@ -597,7 +597,7 @@ img {
 	border: 0px;
 }
 .blog_body {
-	min-height: calc(100vh - 61px);
+	min-height: calc(100vh - 57px);
 }
 button, textarea,input {
 	outline: none;
