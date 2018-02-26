@@ -7,7 +7,7 @@
 
     min = 1;
     max = 4;
-    particles = Math.floor($(window).width()/1920*105);
+    particles = Math.floor($(window).width()/1920*60);
     colors = ["255, 255, 255"];
 
     rand = function(a, b) {
