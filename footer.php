@@ -65,7 +65,6 @@
 				type: 'GET',
 				url: href_+'?load_type=ajax',
 				success: function(res) {
-					console.log(res);
 					$('#index_blog_content').empty().append(res);
 					var page_info_ = $('#index_blog_content').find('.page-navigator').html();
 					$('#index_blog_content').find('.page-navigator').remove();
