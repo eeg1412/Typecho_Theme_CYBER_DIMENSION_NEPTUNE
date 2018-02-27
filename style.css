@@ -635,18 +635,40 @@ button, textarea,input {
     bottom: 10px;
 	display:none;
 }
+.admin_config_ico{
+	width:19px;
+	height:22px;
+	background-image: url(img/admin_config.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:contain;
+	position:fixed;
+	z-index:100;
+	top:60px;
+	right:0;
+}
 /*归档*/
 .archive_month{
 	padding-left:16px;
 }
 .archive_month li{
 	list-style:none;
+	margin: 5px 0;
 }
 .archive_month h4{
 	margin: 6px 0;
 }
 .archive_year h3{
 	margin:6px 0;
+}
+/*分类*/
+.tag_item{
+	margin-right:10px;
+	white-space: nowrap;
+}
+.cate_date{
+	color: #b3b3b3;
+	white-space: nowrap;
 }
 /*手机导航*/
 
@@ -747,6 +769,7 @@ button, textarea,input {
 #pagetop {
     width: 50px;
     height: 50px;
+	bottom: 68px;
 }
 .post_item {
 	width: 100%;
@@ -798,6 +821,9 @@ button, textarea,input {
 }
 .post_item.type_link {
 	width: 30%;
+}
+.admin_config_ico{
+	display:none;
 }
 }
 /*loading*/

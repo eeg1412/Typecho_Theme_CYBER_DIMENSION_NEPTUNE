@@ -39,6 +39,11 @@
 <![endif]-->
 
 <header id="header" class="clearfix">
+	<?php if($this->user->hasLogin()):?>
+    	<div class="admin_config">
+        	<a href="<?php $this->options->adminUrl(); ?>" class="admin_config_ico" target="_blank" title="去后台"></a>
+        </div>
+	<?php endif;?>
     <div class="container blog_top_nav">
         <div class="row">
         
