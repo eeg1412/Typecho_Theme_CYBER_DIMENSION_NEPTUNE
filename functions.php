@@ -20,7 +20,7 @@ function showThumb($obj,$link=false){
     }
     
 	//空的话输出默认随机图
-	$thumb = empty($thumb) ? $options->themeUrl .'/img/op_movie.jpg' : $thumb;
+	$thumb = empty($thumb) ? $options->themeUrl .'/img/op_movie'. mt_rand(1, 12) .'.jpg' : $thumb;
 
 	
     if($link){
