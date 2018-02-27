@@ -572,6 +572,7 @@ img {
 .post_list_img {
 	width: 100%;
 	height: auto;
+	min-height:48px;
 	display: inline-block;
 }
 .post_bg_div {
@@ -860,6 +861,10 @@ button, textarea,input {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+	left:10px;
+	right:auto;
+	top:auto;
+	bottom:48px;
 }
 }
 /*loading*/
