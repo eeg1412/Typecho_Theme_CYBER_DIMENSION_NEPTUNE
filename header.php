@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('/lib/highlight/styles/arduino-light.css'); ?>">
     <script src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>

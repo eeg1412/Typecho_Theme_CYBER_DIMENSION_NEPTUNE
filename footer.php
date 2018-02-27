@@ -7,13 +7,15 @@
 <div id="pagetop"></div>
 <footer id="footer" role="contentinfo">
     &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.<a class="blog_icp" href=http://www.miibeian.gov.cn><?php $this->options->icp() ?></a>
+    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.<span class="blog_icp">Theme By <a href="http://www.wikimoe.com" target="_blank">Hiroki</a>.<a href="http://www.miibeian.gov.cn" target="_blank" style="color: inherit;"><?php $this->options->icp() ?></a></span>
 </footer><!-- end #footer -->
 <?php $this->footer(); ?>
 <?php $this->options->Tongji() ?>
 <?php if ($this->is('index')): ?>
 <script src="<?php $this->options->themeUrl('spark.js'); ?>"></script>
 <?php endif; ?>
+<script src="<?php $this->options->themeUrl('/lib/highlight/highlight.pack.js'); ?>"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script>
 (function(_global) {
 	$(window).scroll(function(){
