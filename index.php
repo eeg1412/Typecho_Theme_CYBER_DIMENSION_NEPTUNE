@@ -1,6 +1,7 @@
 <?php if(isset($_GET['load_type']) and $_GET['load_type'] == 'ajax'):  ?>
     <?php while($this->next()): ?>
     	<a class="post_item" href="<?php $this->permalink() ?>">
+        	<span class="post_blog_time"><?php $this->category(',', false); ?> | <?php $this->date(); ?></span>
         	<div class="post_bg_body">
 				<img src="<?php echo showThumb($this,true); ?>" class="post_list_img">
             </div>
@@ -32,6 +33,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	<div class="clearfix" id="index_blog_content">
 	<?php while($this->next()): ?>
     	<a class="post_item" href="<?php $this->permalink() ?>">
+        	<span class="post_blog_time"><?php $this->category(',', false); ?> | <?php $this->date(); ?></span>
         	<div class="post_bg_body">
 				<img src="<?php echo showThumb($this,true); ?>" class="post_list_img">
             </div>
