@@ -3,7 +3,7 @@
   // background animation
   (function() {
 
-    var Base, Particle, canvas, colors, context, draw, drawables, i, mouseX, mouseY, mouseVX, mouseVY, rand, update, click, min, max, colors, particles;
+    var Base, Particle, canvas, colors, context,  drawables, i, mouseX, mouseY, mouseVX, mouseVY, rand, click, min, max, colors, particles;
 
     min = 1;
     max = 4;
@@ -94,7 +94,8 @@
       return _results;
     })();
 
-    draw = function() {
+    function draw() {
+	  window.requestAnimFrame(draw);
       var d, _i, _len;
       canvas.width = $('.home_goddesses').width();
       canvas.height =$('.home_goddesses').height();
@@ -106,7 +107,8 @@
       }
     };
 
-    update = function() {
+    function update() {
+	  window.requestAnimFrame(update);
       var d, _i, _len, _results;
       _results = [];
       for (_i = 0, _len = drawables.length; _i < _len; _i++) {
@@ -127,6 +129,16 @@
     };
 
     window.addEventListener('resize', draw, false);
-    setInterval(draw, 1000 / 60);
-    setInterval(update, 1000 / 60);
+	window.requestAnimFrame = (function(){
+	  return  window.requestAnimationFrame       ||
+			  window.webkitRequestAnimationFrame ||
+			  window.mozRequestAnimationFrame    ||
+			  function( callback ){
+				window.setTimeout(callback, 1000 / 60);
+			  };
+	})();
+	window.requestAnimFrame(draw);
+    window.requestAnimFrame(update);
+    //setInterval(draw, 1000 / 60);
+    //setInterval(update, 1000 / 60);
   }).call(this);
