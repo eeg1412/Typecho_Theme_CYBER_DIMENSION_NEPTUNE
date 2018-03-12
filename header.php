@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/lib/highlight/styles/arduino-light.css'); ?>">
-    <script src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -97,14 +97,18 @@
 </header><!-- end #header -->
 <?php if ($this->is('index')): ?>
 <div class="home_goddesses">
-	<img src="<?php $this->options->themeUrl('img/key.png'); ?>" class="index_bg_phone_img">
+	<img src="<?php $this->options->themeUrl('/img/key.png'); ?>" class="index_bg_phone_img">
 	<div class="home_bt_bar"></div>
     <canvas id='bg' class="star_effect"></canvas>
+    <input type="hidden" id="jl_min" value="<?php $this->options->jl_min() ?>">
+    <input type="hidden" id="jl_max" value="<?php $this->options->jl_max() ?>">
+    <input type="hidden" id="jl_colors" value="<?php $this->options->jl_colors() ?>">
+    <input type="hidden" id="jl_GradientColors" value="<?php $this->options->jl_GradientColors() ?>">
 </div>
 <?php else: ?>
 <div class="little_white_bg"></div>
 <?php endif; ?>
-<div id="body" class="<?php if ($this->is('index')): ?> white_body<?php endif; ?>">
+<div id="body" class="<?php if ($this->is('index')): ?> white_body<?php endif; ?>" >
     <div class="container">
         <div class="row phone_padding">
 

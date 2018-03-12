@@ -806,7 +806,7 @@ button, textarea,input {
 	margin: 0px 0px 10px 0;
 }
 .home_goddesses {
-	background-image: none;
+	background-image: none!important;
 	height: auto;
 }
 .index_bg_phone_img {

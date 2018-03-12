@@ -18,6 +18,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 <script>
 (function(_global) {
+	console.log($('.home_goddesses').attr('style'));
 	$(window).scroll(function(){
 		var s=$(window).scrollTop();
 		if(s>60){
