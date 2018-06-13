@@ -18,8 +18,8 @@
  * 
  * @package 四女神Online
  * @author 广树
- * @version 1.0
- * @link http://www.wikimoe.com
+ * @version 1.0.1
+ * @link https://www.wikimoe.com/?post=96
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
