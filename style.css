@@ -9,10 +9,12 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: auto;
+	cursor: url('img/web_cursor.cur'),default;
 }
 a {
 	color: #762303;
 	text-decoration: none;
+	cursor: url('img/web_cursor_link.cur'),pointer;
 }
 a:hover, a:active {
 	color: #444;
@@ -626,7 +628,7 @@ img {
 	position: relative;
 	overflow: hidden;
 	font-weight: bold;
-	cursor: pointer;
+	cursor: url('img/web_cursor_link.cur'),pointer;
 }
 .blog_btn:hover {
 	background-color: #2f6bb6;
@@ -658,7 +660,7 @@ button, textarea,input {
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.8;
-    cursor: pointer;
+    cursor: url('img/web_cursor_link.cur'),pointer;
     position: fixed;
     z-index: 500;
     right: 10px;
